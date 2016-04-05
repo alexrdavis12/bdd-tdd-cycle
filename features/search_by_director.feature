@@ -35,5 +35,10 @@ Scenario: can't find similar movies if we don't know director (sad path)
   
 Scenario: remove movie
   Given I am on the details page for "Blade Runner"
-  When  I press "delete_submit"
+  When  I press "Delete"
   And   I should see "Movie 'Blade Runner' deleted."
+  
+Scenario: back to all movies
+  Given I am on the details page for "Alien"
+  When  I press "Back to movie list"
+  And   I should see "All Movies"
